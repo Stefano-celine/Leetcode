@@ -1,18 +1,3 @@
-﻿#include <iostream>
-#include<string>
-#include<vector>
-using namespace std;
-string longestPalindrome(string s);
-int main()
-{
-    while (1)
-    {
-        string str;
-        cin >> str;
-        cout << longestPalindrome(str) << endl;
-    }
-    return 0;
-}
 //动态规划求解最长回文子串
 //因为一个回文子串去掉两头后剩下的依然是回文串，得状态转移方程dp[i][j]=dp[i+1][j-1]∩s[i][j];
 //当子串长度小于等于2时，得边界条件dp[i][i]=true或dp[i][i+1]=true(s[i]==s[i+1])
